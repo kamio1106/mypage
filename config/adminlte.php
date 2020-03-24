@@ -220,19 +220,27 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text'    => 'multilevel',
+            'text'    => '自己紹介',
+            'icon'    => 'fas fa-user-graduate',
+            'url'  => '#',
+        ],
+        [
+            'text'    => 'コンテンツ',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => '開発日記',
+                    'icon'    => 'fas fa-book',
                     'url'  => '#',
                 ],
                 [
-                    'text'    => 'level_one',
+                    'text'    => '制作物',
+                    'icon'    => 'fas fa-inbox',
                     'url'     => '#',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => '情報発信(未定)',
+                    'icon'    => 'fas fa-info-circle',
                     'url'  => '#',
                 ],
             ],

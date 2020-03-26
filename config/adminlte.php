@@ -167,7 +167,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'mypage',
 
     'logout_url' => 'logout',
 
@@ -209,41 +209,24 @@ return [
 
     'menu' => [
         [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
-        ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        ['header' => 'account_settings'],
-        [
             'text'    => '自己紹介',
             'icon'    => 'fas fa-user-graduate',
-            'url'  => '#',
+            'url'  => 'mypage/introduction',
         ],
         [
-            'text'    => 'コンテンツ',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => '開発日記',
-                    'icon'    => 'fas fa-book',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => '制作物',
-                    'icon'    => 'fas fa-inbox',
-                    'url'     => '#',
-                ],
-                [
-                    'text' => '情報発信(未定)',
-                    'icon'    => 'fas fa-info-circle',
-                    'url'  => '#',
-                ],
-            ],
+            'text' => '開発日記',
+            'icon'    => 'fas fa-book',
+            'url'  => 'mypage/diary',
+        ],
+        [
+            'text'    => '制作物',
+            'icon'    => 'fas fa-inbox',
+            'url'     => 'mypage/collection',
+        ],
+        [
+            'text' => '情報発信(未定)',
+            'icon'    => 'fas fa-info-circle',
+            'url'  => 'mypage/information',
         ],
     ],
 

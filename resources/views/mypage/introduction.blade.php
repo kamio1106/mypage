@@ -12,13 +12,10 @@
 
     <div class="content-wrapper">
         <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
                         <div class="profile-card">
                             <div class="profile-card__inner">
                                 <div class="profile-thumb">
-                                    <img src="dist/img/neko-160x160.jpg" alt="アイコン">
+                                    <img src="{{ asset('/vendor/adminlte/dist/img/neko-160x160.jpg') }}" alt="アイコン">
                                 </div>
                                 <div class="profile-content">
                                     <span class="profile-name">猫好きの大学院一年生です</span>
@@ -35,9 +32,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <aside class="control-sidebar control-sidebar-dark">
         </aside>
@@ -46,6 +40,7 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="{{ asset('/css/add_style.css') }}">
 @stop
 
 @section('js')

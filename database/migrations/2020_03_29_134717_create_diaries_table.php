@@ -18,6 +18,7 @@ class CreateDiariesTable extends Migration
             $table->string('title');
             $table->string('content');
             $table->string('filename', 100);
+            $table->string('filename2', 100)->nullable();
             $table->date('date');
             $table->timestamps();
         });

@@ -28,6 +28,7 @@ class DiaryPost extends FormRequest
             'title' => 'required|max:255',
             'content' => 'required',
             'file' => 'required|file|image|mimes:jpeg,png',
+            'file2' => 'file|image|mimes:jpeg,png',
         ];
     }
 }

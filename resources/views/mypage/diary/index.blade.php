@@ -9,7 +9,8 @@
 
 @section('content')
     {{--成功時のメッセージ--}}
-    <a href="{{ route('diary.create') }}">投稿</a>
+    <a href="{{ route('diary.create') }}" class="btn btn-primary" style="margin-bottom:10px;">新規投稿</a>
+    <p>※投稿には管理者パスが必要になります</p>
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
@@ -32,7 +33,14 @@
                     </div>
                 </div>
                 <p class="border-left border-primary" style="padding:10px;">{!! nl2br($diary->content) !!}</p>
-                <img class="img-fluid border border-primary" src="{{ asset('storage/image/' . $diary->filename) }}" alt="diary" />
+                @if($diary->filename2)
+                    <div class="row">
+                        <img class="col-sm-6 img-fluid border border-success" src="{{ asset('storage/image/' . $diary->filename) }}" alt="diary" />
+                        <img class="col-sm-6 img-fluid border border-success" src="{{ asset('storage/image/' . $diary->filename2) }}" alt="diary" />
+                    </div>
+                @else
+                    <img class="img-fluid border border-success" src="{{ asset('storage/image/' . $diary->filename) }}" alt="diary" />
+                @endif
             </div>
         </div>
     @endforeach

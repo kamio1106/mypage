@@ -38,13 +38,19 @@ class DiaryController extends Controller
     public function upload(DiaryPost $request)
     {
         if ($request->file('file')->isValid([])) {
-            $filename = $request->file->store('public/image');
+            $filename = $request->file('file')->store('public/image');
 
             $diary = new Diary;
             $diary->title = $request->title;
             $diary->date = $request->date;
             $diary->content =$request->content;
             $diary->filename = basename($filename);
+            if($request->file('file2') !== null){
+                if ($request->file('file2')->isValid([])) {
+                    $filename2 = $request->file('file2')->store('public/image');
+                    $diary->filename2 = basename($filename2);
+                }
+            }
             $diary->save();
             return redirect('mypage/diary')->with('success', '保存しました。');
         } else {

@@ -19,9 +19,8 @@ Route::get('/mypage', function () {
 Route::get('/mypage/introduction', function () {
     return view('mypage/introduction');
 });
-Route::get('/mypage/diary', function () {
-    return view('mypage/diary');
-});
+Route::get('/mypage/diary','DiaryController@index');
+Route::post('/mypage/diary/upload', 'DiaryController@upload');
 Route::get('/mypage/collection', function () {
     return view('mypage/collection');
 });

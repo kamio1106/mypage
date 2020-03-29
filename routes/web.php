@@ -20,7 +20,7 @@ Route::get('/mypage/introduction', function () {
     return view('mypage/introduction');
 });
 Route::get('/mypage/diary','DiaryController@index');
-Route::get('/mypage/diary/create','DiaryController@create');
+Route::get('/mypage/diary/create','DiaryController@create')->name('diary.create');
 Route::post('/mypage/diary/upload', 'DiaryController@upload');
 
 

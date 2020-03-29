@@ -17,13 +17,17 @@
     @endif
     {!! Form::open(['url' => '/mypage/diary/upload', 'method' => 'post', 'files' => true]) !!}
         <div class="row">
-            <div class="form-group col-sm-4">
-                {!! Form::label('file', '画像アップロード', ['class' => 'control-label']) !!}<br>
+            <div class="form-group col-sm-3">
+                {!! Form::label('file', '画像', ['class' => 'control-label']) !!}<br>
                 {!! Form::file('file') !!}
+            </div>
+            <div class="form-group col-sm-3">
+                {!! Form::label('date', '日付') !!}
+                {!! Form::text('date', null, ['class' => 'form-control','placeholder' => 'YYYY-MM-DD']) !!}
             </div>
             <div class="form-group col-sm-4">
                 {!! Form::label('password', 'パスワード') !!}
-                {!! Form::text('password', null, ['class' => 'form-control','placeholder' => '投稿には管理人パスワードが必要です']) !!}
+                {!! Form::text('password', null, ['class' => 'form-control','placeholder' => '※投稿には管理人パスワードが必要です']) !!}
             </div>
         </div>
         <div class="form-group">

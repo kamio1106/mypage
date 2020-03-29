@@ -42,6 +42,7 @@ class DiaryController extends Controller
 
             $diary = new Diary;
             $diary->title = $request->title;
+            $diary->date = $request->date;
             $diary->content =$request->content;
             $diary->filename = basename($filename);
             $diary->save();

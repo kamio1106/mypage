@@ -27,7 +27,7 @@ class DiaryPost extends FormRequest
             'password' => 'required|digits_between:16,16|',
             'title' => 'required|max:255',
             'content' => 'required',
-            'file' => 'required|file|image|mimes:jpeg,png|dimensions:min_width=120,min_height=120,max_width=400,max_height=400',
+            'file' => 'required|file|image|mimes:jpeg,png',
         ];
     }
 }

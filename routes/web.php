@@ -20,10 +20,15 @@ Route::get('/mypage/introduction', function () {
     return view('mypage/introduction');
 });
 Route::get('/mypage/diary','DiaryController@index');
+Route::get('/mypage/diary/create','DiaryController@create');
 Route::post('/mypage/diary/upload', 'DiaryController@upload');
+
+
+
 Route::get('/mypage/collection', function () {
     return view('mypage/collection');
 });
+
 Route::get('/mypage/information', function () {
     return view('mypage/information');
 });

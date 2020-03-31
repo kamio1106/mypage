@@ -26,6 +26,7 @@ class DiaryPost extends FormRequest
         return [
             'password' => 'required|digits_between:16,16|',
             'title' => 'required|max:255',
+            'date' => 'required',
             'content' => 'required',
             'file' => 'required|file|image|mimes:jpeg,png',
             'file2' => 'file|image|mimes:jpeg,png',

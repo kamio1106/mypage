@@ -19,6 +19,8 @@ Route::get('/mypage/introduction', function () {
 Route::get('/mypage/diary','DiaryController@index');
 Route::get('/mypage/diary/create','DiaryController@create')->name('diary.create');
 Route::post('/mypage/diary/upload', 'DiaryController@upload');
+Route::get('/mypage/diary/{id}/edit', 'DiaryController@edit')->name('diary.edit');
+Route::post('/mypage/diary/{id}/updata', 'DiaryController@updata')->name('diary.updata');
 
 
 

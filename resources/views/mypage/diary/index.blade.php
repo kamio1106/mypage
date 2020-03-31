@@ -29,13 +29,13 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm3">
-                        <h3>{{ $diary->date }}</h3>
+                        <h5>{{ $diary->date }}</h5>
                     </div>
                     <div class="offset-sm-8 col-sm-1">
                         <a href="{{ route('diary.edit', ['id' => $diary->id]) }}">編集</a>
                     </div>
                 </div>
-                <p class="border-left border-primary" style="padding:10px;">{!! nl2br($diary->title) !!}</p>
+                <h3 style="border-left:solid; border-width:5px; border-color:blue; padding-left:10px;">{!! nl2br($diary->title) !!}</h3>
                 <p>{!! nl2br($diary->content) !!}</p>
                 @if($diary->filename2)
                     <div class="row">

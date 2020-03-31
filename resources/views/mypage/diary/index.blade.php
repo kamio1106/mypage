@@ -25,14 +25,18 @@
         </div>
     @endif
     @foreach($diaries as $diary)
-        <div class="card">
+        <div class="card" style="margin-bottom:50px;">
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm3">
                         <h3>{{ $diary->date }}</h3>
                     </div>
+                    <div class="offset-sm-8 col-sm-1">
+                        <a href="{{ route('diary.edit', ['id' => $diary->id]) }}">編集</a>
+                    </div>
                 </div>
-                <p class="border-left border-primary" style="padding:10px;">{!! nl2br($diary->content) !!}</p>
+                <p class="border-left border-primary" style="padding:10px;">{!! nl2br($diary->title) !!}</p>
+                <p>{!! nl2br($diary->content) !!}</p>
                 @if($diary->filename2)
                     <div class="row">
                         <img class="col-sm-6 img-fluid border border-success" src="{{ asset('storage/image/' . $diary->filename) }}" alt="diary" />

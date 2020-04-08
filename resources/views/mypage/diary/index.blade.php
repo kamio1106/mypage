@@ -42,7 +42,7 @@
                         <img class="col-sm-6 img-fluid border border-success" src="{{ asset('storage/image/' . $diary->filename) }}" alt="diary" />
                         <img class="col-sm-6 img-fluid border border-success" src="{{ asset('storage/image/' . $diary->filename2) }}" alt="diary" />
                     </div>
-                @else
+                @elseif($diary->filename)
                     <img class="img-fluid border border-success" src="{{ asset('storage/image/' . $diary->filename) }}" alt="diary" />
                 @endif
             </div>

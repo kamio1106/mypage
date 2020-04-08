@@ -41,14 +41,15 @@ class DiaryController extends Controller
         $diary->title = $request->title;
         $diary->date = $request->date;
         $diary->content =$request->content;
-        if ($request->file('file')->isValid([])) {
-            $filename = $request->file('file')->store('public/image');
-
-            $diary->filename = basename($filename);
-            if($request->file('file2') !== null){
-                if ($request->file('file2')->isValid([])) {
-                    $filename2 = $request->file('file2')->store('public/image');
-                    $diary->filename2 = basename($filename2);
+        if($request->file('file') !== null) {
+            if ($request->file('file')->isValid([])) {
+                $filename = $request->file('file')->store('public/image');
+                $diary->filename = basename($filename);
+                if ($request->file('file2') !== null) {
+                    if ($request->file('file2')->isValid([])) {
+                        $filename2 = $request->file('file2')->store('public/image');
+                        $diary->filename2 = basename($filename2);
+                    }
                 }
             }
         }

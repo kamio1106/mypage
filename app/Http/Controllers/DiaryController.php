@@ -37,13 +37,13 @@ class DiaryController extends Controller
      */
     public function upload(DiaryPost $request)
     {
+        $diary = new Diary;
+        $diary->title = $request->title;
+        $diary->date = $request->date;
+        $diary->content =$request->content;
         if ($request->file('file')->isValid([])) {
             $filename = $request->file('file')->store('public/image');
 
-            $diary = new Diary;
-            $diary->title = $request->title;
-            $diary->date = $request->date;
-            $diary->content =$request->content;
             $diary->filename = basename($filename);
             if($request->file('file2') !== null){
                 if ($request->file('file2')->isValid([])) {
@@ -51,14 +51,9 @@ class DiaryController extends Controller
                     $diary->filename2 = basename($filename2);
                 }
             }
-            $diary->save();
-            return redirect('mypage/diary')->with('success', '保存しました。');
-        } else {
-            return redirect()
-                ->back()
-                ->withInput()
-                ->withErrors(['file' => '画像がアップロードされていないか不正なデータです。']);
         }
+        $diary->save();
+        return redirect('mypage/diary')->with('success', '保存しました。');
     }
     public function edit($id)
     {

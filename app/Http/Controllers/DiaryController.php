@@ -21,10 +21,11 @@ class DiaryController extends Controller
      */
     public function index()
     {
-        $diaries = Diary::orderBy('date','desc')->get();
-        return view('mypage.diary.index',[
-            'diaries' => $diaries,
-        ]);
+//        $diaries = Diary::orderBy('date','desc')->get();
+//        return view('mypage.diary.index',[
+//            'diaries' => $diaries,
+//        ]);
+        return view('mypage.diary.index');
     }
     public function create()
     {

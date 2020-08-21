@@ -22,7 +22,7 @@
                 <span class="profile-text"><span>○</span>名前:大塚凜太郎(23)</span>
                 <span class="profile-text"><span>○</span>趣味:ダーツ、ボウリング、漫画を読むこと</span>
                 <span class="profile-text"><span>○</span>大学:東京大学修士1年、専攻は微生物の遺伝子研究(2019/10月より休学)</span>
-                <br>
+                <br>e
                 <span class="profile-reason">将来はwebエンジニアとして活躍したいと考えています。</span>
                 <span class="profile-reason">現在web系企業でインターンをしながらメキメキ上達中!!主にLaravelを使っています。</span>
             </div>
@@ -33,7 +33,6 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
     <link rel="stylesheet" href="{{ asset('/css/add_style.css') }}">
 @stop
 

@@ -45,8 +45,8 @@ return [
     |
     */
 
-    'logo' => 'Rintaro_Otsuka',
-    'logo_img' => 'vendor/adminlte/dist/img/neko-160x160.jpg',
+    'logo' => 'かみおからの挑戦状',
+    'logo_img' => 'vendor/adminlte/dist/img/bakemono.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -209,23 +209,23 @@ return [
 
     'menu' => [
         [
-            'text'    => '自己紹介',
+            'text'    => 'かみお様から一言',
             'icon'    => 'fas fa-user-graduate',
             'url'  => 'mypage/introduction',
         ],
         [
-            'text' => '開発日記',
-            'icon'    => 'fas fa-book',
+            'text' => 'Q1',
+            'icon'    => 'fas fa-unlock',
             'url'  => 'mypage/diary',
         ],
         [
-            'text'    => '制作物',
-            'icon'    => 'fas fa-inbox',
+            'text'    => 'Q2',
+            'icon'    => 'fas fa-unlock',
             'url'     => 'mypage/collection',
         ],
         [
-            'text' => '情報発信(未定)',
-            'icon'    => 'fas fa-info-circle',
+            'text' => 'Q3',
+            'icon'    => 'fas fa-lock',
             'url'  => 'mypage/information',
         ],
     ],

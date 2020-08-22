@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Diary;
 use App\Http\Requests\DiaryPost;
+//use App\Http\Requests\InformationPost;
 use Illuminate\Http\Request;
 
 class DiaryController extends Controller
@@ -89,7 +90,7 @@ class DiaryController extends Controller
                 ->withErrors(['file' => '画像がアップロードされていないか不正なデータです。']);
         }
     }
-    public function testupload($request)
+    public function testupload()
     {
         return view('mypage.information_clear');
     }

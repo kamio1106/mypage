@@ -9,7 +9,8 @@
 
 @section('content')
     <div>
-        aaa
+        good!!<br><br>
+        大秘宝はけつの下にあり
     </div>
 @stop
 

@@ -24,12 +24,8 @@ class DiaryPost extends FormRequest
     public function rules()
     {
         return [
-            'password' => 'required|digits_between:16,16',
-            'title' => 'required|max:255',
-            'date' => 'required',
-            'content' => 'required',
-            'file' => 'file|image|mimes:jpeg,png',
-            'file2' => 'file|image|mimes:jpeg,png'
+            'ans' => 'required|digits_between:16,16',
+
         ];
     }
 }

@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth.very_basic'], function() {
     Route::get('/mypage/information', function () {
         return view('mypage/information');
     });
+    Route::post('/mypage/information/upload', 'DiaryController@testupload');
 
 });
 

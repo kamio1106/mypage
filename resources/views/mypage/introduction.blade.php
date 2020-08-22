@@ -28,23 +28,19 @@
 {{--            </div>--}}
 {{--        </div>--}}
         <div class="profile-card__inner">
-            <div class="profile-thumb">
-                <img src="{{ asset('/img/bakemono.jpg') }}" alt="アイコン">
-            </div>
-            <div class="profile-content">
-                <div class="profile-content" style="line-height:500%; font-size:10px;">
-                    <span class="profile-name">
-                        私は酒柱<br>
-                        おしりした・ゼウス・かみお<br><br>
-                        まい、24歳のお誕生日おめでとう<br><br><br><br>
-                        と、言いたいところだが<br><br>
-                        そう簡単に次の日を迎えられると思わない方がいい。<br><br>
-                        酒柱の私が君に試練を与える<br><br>
-                        この試練を乗り越えられなければ<br><br>
-                        莫大な量の酒が君を襲うだろう<br><br>
-                        では、検討を祈る<br><br>
-                    </span>
-                </div>
+            <div class="profile-content" style="line-height:10000%; font-size:15px;">
+                <span class="profile-name" >
+                    <p class="inview_re fadeIn">私は酒柱</p>
+                    <p class="inview_re fadeIn">おしりした・ゼウス・かみお</p>
+                    <p class="inview_re fadeIn">まい、24歳のお誕生日おめでとう</p>
+                    <p class="inview_re fadeIn">と、言いたいところだが</p>
+                    <p class="inview_re fadeIn">そう簡単に次の日を迎えられると</p>
+                    <p class="inview_re fadeIn">思わない方がいい</p>
+                    <p class="inview_re fadeIn">酒柱の私が君に試練を与える</p>
+                    <p class="inview_re fadeIn">この試練を乗り越えられなければ</p>
+                    <p class="inview_re fadeIn">莫大な量の酒が君を襲うだろう</p>
+                    <p class="inview_re fadeIn">では、検討を祈る</p>
+                </span>
             </div>
         </div>
     </div>
@@ -57,4 +53,16 @@
 @stop
 
 @section('js')
+    <script type="text/javascript" src="{{ asset('/js/jquery.inview.min.js') }}"></script>
+    <script>
+        $(function(){
+            $(".inview_re").on("inview", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("is-show");
+                } else {
+                    $(this).stop().removeClass("is-show");
+                }
+            });
+        });
+    </script>
 @stop

@@ -115,3 +115,11 @@
     margin: 0;
     float: left;
 }
+
+.fadeIn {
+    opacity: 0;
+    transition: 5s;
+}
+.fadeIn.is-show {
+    opacity: 1;
+}

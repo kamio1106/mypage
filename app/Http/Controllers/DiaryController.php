@@ -89,4 +89,8 @@ class DiaryController extends Controller
                 ->withErrors(['file' => '画像がアップロードされていないか不正なデータです。']);
         }
     }
+    public function testupload($request)
+    {
+        return view('mypage.information_clear');
+    }
 }

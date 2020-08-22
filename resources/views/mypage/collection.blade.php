@@ -14,7 +14,7 @@
                     <div class="col-12">
                         <div class="small-box bg-success">
                             <div class="inner" style="padding:40px 0px;">
-                                <h3><i class="poo-left fas fa-poo" style="margin-right:30px; color:red;"></i>Q1<i class="poo-right fas fa-poo" id="jQueryPush2" style="margin-left:30px; color:blue;"></i></h3>
+                                <h3><i class="poo-left fas fa-poo" id="jQueryPush2" style="margin-right:30px; color:red;"></i>Q1<i class="poo-right fas fa-poo" id="jQueryPush3" style="margin-left:30px; color:blue;"></i></h3>
                             </div>
                             <a href="#" class="small-box-footer" id="jQueryPush1">Open<i class="fas fa-arrow-circle-right"></i></a>
                         </div>
@@ -74,7 +74,7 @@
         </section>
         <div class="card mx-auto" id="jQueryBox" style="width:80%; margin:50px;">
             <div class="card-body" id="card-body">
-                <h4 class="card-comment" id="card-title" style="padding:5px 5px; text-align:center; color:blue;"></h4>
+                <h4 class="card-comment" id="card-title" style="padding:5px 5px; text-align:center;"></h4>
             </div>
         </div>
 @stop
@@ -89,43 +89,45 @@
         $(function(){
             $("#jQueryBox").css("display", "none");
             $("#jQueryPush1").click(function(){
-                if(flg == "close"){
-                    $("#jQueryBox").toggle();
-                    $("#card-title").html("うんこ");
-                    flg = "open-1";
-                }else if(flg=="open-1"){
+                if(flg=="open-1"||flg=="open-2"||flg=="open-3"){
                     $("#jQueryBox").toggle();
                     flg = "close"
                 }else{
                     $("#jQueryBox").toggle();
                     $("#card-title").html("うんこ");
+                    $("#card-title").css('color', ' red');
                     flg = "open-1";
                 }
             });
 
-
             $("#jQueryPush2").click(function(){
-                if(flg == "close"){
+                if(flg=="open-1") {
                     $("#jQueryBox").toggle();
-                    $("#card-title").html("Laravelを使って作成した擬似ツイッターサイトです。</br>"+"Techacademyのコースを受講しながら作成したものです。</br>"+"</br>");
-                    $("#card-time").html("○制作期間:2週間");
-                    $("#card-language").html("○使用言語:PHP(laravle)");
-                    $("#card-url").html("<a href='http://microposts-laravel1106.herokuapp.com/' target=\"_blank\" rel=\"noopener noreferrer\">サイトはこちら</a>");
+                    $("#jQueryBox").toggle();
+                    $("#card-title").html("うんこ");
+                    $("#card-title").css('color', ' blue');
                     flg = "open-2";
-                }else if(flg=="open-2"){
+                }else if(flg=="open-2"||flg=="open-3"){
+                    $("#jQueryBox").toggle();
+                    flg = "close";
+                }
+            });
+
+            $("#jQueryPush3").click(function(){
+                if(flg == "open-2"){
+                    $("#jQueryBox").toggle();
+                    $("#jQueryBox").toggle();
+                    $("#card-title").html("⠛⠃⠐⠺⠉⠪⠔⠷⠜");
+                    $("#card-title").css('color', ' black');
+                    flg = "open-3";
+                }else if(flg=="open-3") {
                     $("#jQueryBox").toggle();
                     flg = "close"
-                }else{
-                    $("#card-title").html("Laravelを使って作成した擬似ツイッターサイトです。</br>"+"Techacademyのコースを受講しながら作成したものです。</br>"+"</br>");
-                    $("#card-time").html("○制作期間:2週間");
-                    $("#card-language").html("○使用言語:PHP(laravle)");
-                    $("#card-url").html("<a href='http://microposts-laravel1106.herokuapp.com/' target=\"_blank\" rel=\"noopener noreferrer\">サイトはこちら</a>");
-                    flg = "open-2"
                 }
-
-
-            })
+            });
         });
+
+
 // var flg = "close";
 //         $(function(){
 //             $("#jQueryBox").css("display", "none");

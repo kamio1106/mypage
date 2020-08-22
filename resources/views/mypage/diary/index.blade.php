@@ -8,7 +8,11 @@
 @stop
 
 @section('content')
-    
+
+    <div>
+        左上がスタート、右下がゴール<br>
+        サイズ変えると表示も変わるよ<br><br>
+    </div>
     <div style="margin-bottom:10px;">
         迷路のサイズ：
         <input id="mazeSize" type="text" value="20" style="width:30px;">
@@ -230,7 +234,7 @@
                     target = "0以上が吉"
                 }
             }else if(size == 89){
-                target = "後でQRに変換"
+                target = "おつでぃ〜す"
             }else if(size <= 94 && size >= 84){
                 target = "説ある"
             }else{
@@ -243,7 +247,10 @@
 
             var size = parseInt(document.querySelector("#mazeSize").value);
             if (isNaN(size)) size = 20;
-            if (size < 200){
+            if(size == 89) {
+                $('#maze').html('<img src={{ asset('/img/qr.png') }} >');
+                $('#text-judge').html("");
+            }else if (size < 200) {
                 // 迷路を描画する
                 var maze = new Maze(size);
                 maze.create({algorithm: Maze.ALGO.STICK});

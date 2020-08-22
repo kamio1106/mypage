@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/mypage/introduction', function () {
     return view('mypage/introduction');
 });
-Route::get('/mypage/diary','DiaryController@index');
+//Route::get('/mypage/diary','DiaryController@index');
 //Route::get('/mypage/diary/create','DiaryController@create')->name('diary.create');
 //Route::post('/mypage/diary/upload', 'DiaryController@upload');
 //Route::get('/mypage/diary/{id}/edit', 'DiaryController@edit')->name('diary.edit');
@@ -31,9 +31,14 @@ Route::group(['middleware' => 'auth.very_basic'], function() {
 });
 
 
-Route::get('/mypage/collection', function () {
+//Route::get('/mypage/collection', function () {
+//    return view('mypage/collection');
+//});
+Route::get('/mypage/diary', function () {
     return view('mypage/collection');
 });
+Route::get('/mypage/collection','DiaryController@index');
+
 
 Route::get('/mypage/collection/board', function () {
     return view('mypage/collection/board');

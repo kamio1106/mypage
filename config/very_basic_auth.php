@@ -5,10 +5,10 @@
      */
     return [
         // Username
-        'user'              => 'admin',
+        'user'              => 'uranofuck',
 
         // Password
-        'password'          => 'lRBohSPA',
+        'password'          => 'sakisan',
 
         // Environments where the middleware is active. Use "*" to protect all envs
         'envs'              => [

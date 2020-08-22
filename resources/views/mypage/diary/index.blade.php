@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', '開発日記')
+@section('title', 'Q2')
 
 @section('content_header')
 @stop
@@ -15,7 +15,7 @@
     </div>
     <div style="margin-bottom:10px;">
         迷路のサイズ：
-        <input id="mazeSize" type="text" value="20" style="width:30px;">
+        <input id="mazeSize" type="text" value="20" style="width:50px;">
         <button id="create">Create</button>
     </div>
     <div id="maze"></div>

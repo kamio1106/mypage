@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', '自己紹介')
+@section('title', 'こんにちは')
 
 @section('content_header')
 @stop

@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', '制作物')
+@section('title', 'Q1')
 
 @section('content_header')
 @stop

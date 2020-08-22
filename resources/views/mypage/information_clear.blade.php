@@ -2,7 +2,7 @@
 
 @extends('adminlte::page')
 
-@section('title', 'クリアx')
+@section('title', 'クリア')
 
 @section('content_header')
 @stop

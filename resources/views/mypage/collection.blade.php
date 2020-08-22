@@ -114,12 +114,19 @@
             });
 
             $("#jQueryPush3").click(function(){
+                function hide(){
+                    $("#jQueryBox").toggle();
+                    flg = "close";
+                }
                 if(flg == "open-2"){
                     $("#jQueryBox").toggle();
                     $("#jQueryBox").toggle();
                     $("#card-title").html("⠛⠃⠐⠺⠉⠪⠔⠷⠜");
                     $("#card-title").css('color', ' black');
                     flg = "open-3";
+                    setTimeout(function(){
+                        hide();
+                    },1000);
                 }else if(flg=="open-3") {
                     $("#jQueryBox").toggle();
                     flg = "close"

@@ -89,7 +89,7 @@
         $(function(){
             $("#jQueryBox").css("display", "none");
             $("#jQueryPush1").click(function(){
-                if(flg=="open-1"||flg=="open-2"||flg=="open-3"){
+                if(flg=="open-1"||flg=="open-2"){
                     $("#jQueryBox").toggle();
                     flg = "close"
                 }else{
@@ -107,7 +107,7 @@
                     $("#card-title").html("うんこ");
                     $("#card-title").css('color', ' blue');
                     flg = "open-2";
-                }else if(flg=="open-2"||flg=="open-3"){
+                }else if(flg=="open-2"){
                     $("#jQueryBox").toggle();
                     flg = "close";
                 }
@@ -127,9 +127,6 @@
                     setTimeout(function(){
                         hide();
                     },1000);
-                }else if(flg=="open-3") {
-                    $("#jQueryBox").toggle();
-                    flg = "close"
                 }
             });
         });
